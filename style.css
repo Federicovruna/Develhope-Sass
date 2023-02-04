@@ -9,8 +9,8 @@ div {
 }
 div h1 {
   color: green;
-  text-decoration-color: div h1 blue;
   text-decoration: underline;
+  text-decoration-color: div h1 blue;
 }
 
 section {
