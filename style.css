@@ -1,0 +1,40 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid red;
+  padding: 10px;
+  width: 1200px;
+}
+div h1 {
+  color: green;
+  text-decoration-color: div h1 blue;
+  text-decoration: underline;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+section article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: auto;
+  border: 1px solid green;
+}
+section article:nth-child(odd) {
+  color: blue;
+}
+section article:nth-child(even) {
+  color: red;
+}
+section article p {
+  margin: 10px;
+  text-align: center;
+  font-size: small;
+}
+
+/*# sourceMappingURL=style.css.map */
