@@ -1,0 +1,83 @@
+$color_red: red;
+$color_green: green;
+$color_blue: blue;
+
+@function rem($px){
+    @return calc($px/16) + rem;
+}
+
+.green{
+    color: $color_green;
+}
+
+@mixin article-card($color, $font_size, $border_color) {
+    border: 1px solid $border_color;
+    font-size: $font_size;
+    color: $color;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color_red;
+    padding: rem(16);
+    width: rem(1200);
+    h1{
+        @extend .green;
+        text-decoration: underline;
+        text-decoration-color: $color_blue;
+    }
+    h2{
+        @extend .green;
+        border: 1px solid $color_red;
+        padding: 1rem;
+    }
+}
+
+.Section_1{
+    display: flex;
+    flex-direction: row;
+    article{ 
+        display: flex;
+        border: 1px solid $color_green;
+        justify-content: center;
+        align-items: center;
+        height: rem(100);
+        width: auto;
+        
+        &:nth-child(odd){
+            color: $color_blue;
+        }
+        
+        &:nth-child(even){
+            color: $color_red;
+        }
+        p{
+            margin: rem(10);
+            text-align: center;
+            font-size: small;
+        }
+    }
+}
+
+
+.Section_2{
+    margin-top: rem(10);
+    width: 100%;
+    article{
+        height: rem(100);
+        @include article-card($color_green,rem(23),$color_blue );
+        p{
+            margin-top: rem(38);
+            text-align:center;
+        }
+    }
+}
+
+
+
+
+
+
